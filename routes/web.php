@@ -14,5 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    //Insert some data to pass to Home Page
+    $data = [
+        'name' => 'Nicola',
+        'isLoggedIn' => true
+    ];
+    return view('HomePage', $data);
+})->name('home');
+
+Route::get('about-us', function () {
+    return view('about-us');
+})->name('about');

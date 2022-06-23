@@ -14,10 +14,12 @@
         <a href=" {{ route('about') }} ">About us</a>
         <a href=" {{ route('services') }} ">Services</a>
     </header>
+
+    @for ($i = 0; $i < 100; $i++)
+        <ul>
+            <li>{{ $i }}</li>
+        </ul>
+    @endfor
 </body>
 
 </html>
-
-@for ($i = 0; $i < 100; $i++)
-    <li>{{ $i }}</li>
-@endfor

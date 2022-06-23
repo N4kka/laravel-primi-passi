@@ -18,12 +18,13 @@
     <main>
         <h1>Hello World! This is {{ $name }} home page</h1>
     </main>
+
+    @if ($isLoggedIn)
+        <p>Sei correttamente loggato al sito.</p>
+    @else
+        <p>Effettua il login al sito.</p>
+    @endif
+
 </body>
 
 </html>
-
-@if ($isLoggedIn)
-    <p>Sei correttamente loggato al sito.</p>
-@else
-    <p>Effettua il login al sito.</p>
-@endif

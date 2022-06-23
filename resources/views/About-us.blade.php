@@ -17,10 +17,11 @@
     <main>
         <h1>This is the about us page </h1>
     </main>
+
+    @foreach ($contact as $item)
+        <h1> {{ $item['name'] }} </h1>
+    @endforeach
+
 </body>
 
 </html>
-
-@foreach ($contact as $item)
-    <h1> {{ $item['name'] }} </h1>
-@endforeach

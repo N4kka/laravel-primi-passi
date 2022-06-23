@@ -68,3 +68,7 @@ Route::get('/services', function () {
     ];
     return view('services', $data);
 })->name('services');
+
+Route::get('/joinUs', function() {
+    return view('joinUs');
+})->name('join');

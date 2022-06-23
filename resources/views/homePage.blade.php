@@ -13,6 +13,7 @@
     <header>
         <a href=" {{ route('about') }} ">About Us</a>
         <a href=" {{ route('services') }} ">Services</a>
+        <a href=" {{ route('join') }} ">Join Us</a>
     </header>
     <main>
         <h1>Hello World! This is {{ $name }} home page</h1>

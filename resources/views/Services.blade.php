@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Services</title>
-    <link rel="stylesheet" href="/master.css">
 </head>
 <body>
     <header>
         <a href=" {{ route('home') }} ">Home Page</a>
         <a href=" {{ route('about') }} ">About us</a>
+        <a href=" {{ route('join') }} ">Join Us</a>
     </header>
     <main></main>
 </body>

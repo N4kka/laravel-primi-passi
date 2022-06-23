@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About us</title>
+    <title>Services</title>
     <link rel="stylesheet" href="/master.css">
 </head>
-
 <body>
     <header>
         <a href=" {{ route('home') }} ">Home Page</a>
-        <a href=" {{ route('services') }} ">Services</a>
+        <a href=" {{ route('about') }} ">About us</a>
     </header>
-    <main>
-        <h1>This is the about us page </h1>
-    </main>
+    <main></main>
 </body>
-
 </html>
 
-@foreach ($contact as $item)
-    <h1> {{ $item['name'] }} </h1>
+@foreach ($services as $item)
+    {{-- Print the services list --}}
+    <li>
+        {{ $item['name'] }}
+        @if ($loop->first)
+            ->first element
+        @endif
+    </li>
+    <p> {{ $item['duration'] }} </p>
 @endforeach

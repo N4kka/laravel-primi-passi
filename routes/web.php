@@ -22,6 +22,49 @@ Route::get('/', function () {
     return view('HomePage', $data);
 })->name('home');
 
-Route::get('about-us', function () {
-    return view('about-us');
+Route::get('/about-us', function () {
+    $data = [
+        'contact' => [
+            [
+                'name' => 'About us'
+            ],
+            [
+                'name' => 'Phone'
+            ],
+            [
+                'name' => 'Website'
+            ],
+            [
+                'name' => 'Address'
+            ],
+            [
+                'name' => 'Email'
+            ],
+        ]
+    ];
+    return view('about-us', $data);
 })->name('about');
+
+Route::get('/services', function () {
+    $data = [
+        'services' => [
+            'first' => [
+                'name' => 'business',
+                'duration' => '12 months'
+            ],
+            'second' => [
+                'name' => 'tech',
+                'duration' => '6 months'
+            ],
+            'third' => [
+                'name' => 'finance',
+                'duration' => '3 months'
+            ],
+            'fourth' => [
+                'name' => 'videos',
+                'duration' => '1 months'
+            ]
+        ]
+    ];
+    return view('services', $data);
+})->name('services');
